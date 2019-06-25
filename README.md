@@ -19,9 +19,7 @@ npm install nestjs-fire --save
 ### Getting Started
 
 ```typescript
-import { Controller, Post, Body, Get, Res, Query, Param, UseGuards } from '@nestjs/common'
-import { KyappService } from './kyapp.service'
-import { Source } from './../../core'
+import { Controller, Get, UseGuards } from '@nestjs/common'
 import { IPs, WhiteListGuard, BlackListGuard } from 'nestjs-fire'
 
 @IPs('127.0.0.1')
@@ -29,7 +27,7 @@ OR
 @Hosts('www.xxx.com')
 @UseGuards(BlackListGuard)
 @Controller('')
-export class KyappController {
+export class TestController {
 
     @IPs('127.0.0.1')
     OR
