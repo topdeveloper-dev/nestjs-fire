@@ -1,6 +1,6 @@
 {
   "name": "nestjs-fire",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a nestjs firewall",
   "author": "zzy",
   "license": "MIT",
