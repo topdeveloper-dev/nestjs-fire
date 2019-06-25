@@ -1,0 +1,49 @@
+{
+  "name": "nestjs-fire",
+  "version": "1.0.0",
+  "description": "a nestjs firewall",
+  "author": "zzy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyknow/nestjs-fire"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "precommit": "lint-staged",
+    "prepublish:npm": "yarn run build",
+    "publish:npm": "yarn publish --access public",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.3.2",
+    "@nestjs/core": "^6.3.2",
+    "lodash": "^4.17.11",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.134",
+    "@types/node": "^10.7.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.18.0",
+    "typescript": "^2.4.2"
+  },
+  "keywords": [
+    "nestjs",
+    "nest",
+    "firewall",
+    "access"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
